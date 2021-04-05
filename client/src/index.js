@@ -10,7 +10,7 @@ import dotenv from 'dotenv';
 import App from './App';
 // import * as serviceWorker from "./serviceWorker";
 
-dotenv.config();
+dotenv.config({path: '/server/.env'});
 
 const httpLink = createHttpLink({ uri: `http://localhost:${process.env.PORT_SERVER}graphql` });
 const link = ApolloLink.from([httpLink]);
