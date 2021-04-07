@@ -1,13 +1,9 @@
-// import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-// import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './App.css';
 import AllNotes from './AllNotes';
 import NewNote from './NewNote';
 import EditNote from './EditNote';
+import Form from './Form';
 
 function App() {
     return (
@@ -15,18 +11,15 @@ function App() {
         <div>
           <nav className="navbar App-header" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-              <Link to="/" className="navbar-item">
-                NotesQL
-              </Link>
-            </div><div className="navbar-end">
-              <Link to="/" className="navbar-item">
-                All Notes
-              </Link>
-              <Link to="/newnote" className="navbar-item">
-                New Note
-              </Link>
+              <Link to="/" className="navbar-item">Book of Shadows</Link>
             </div>
-          </nav><Route exact path="/" component={AllNotes}/>
+            <div className="navbar-end">
+              <Link to="/" className="navbar-item">All Notes</Link>
+              <Link to="/newnote" className="navbar-item">New Note</Link>
+              <Form />
+            </div>
+          </nav>
+          <Route exact path="/" component={AllNotes}/>
           <Route path="/newnote" component={NewNote}/>
           <Route path="/note/:id" component={EditNote}/>
         </div>

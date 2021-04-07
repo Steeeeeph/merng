@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { withRouter } from "react-router-dom";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import { notify } from 'react-notify-toast';
 
 const NEW_NOTE = gql`
     mutation createNote($title: String! $content: String!) {
@@ -59,7 +60,12 @@ const NewNote = withRouter(({ history }) => {
                                 date: Date.now()
                             }
                         });
-
+                        // TODO notification/ empty field error 
+                        // if (!empty) {
+                        //     notify.show("Note was edited successfully", "success");
+                        // } else {
+                        // notify.show("Please fill in the fields", "error");
+                        // }
                         history.push("/");
                     }}
                 >

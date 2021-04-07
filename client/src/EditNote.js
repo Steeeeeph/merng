@@ -49,7 +49,6 @@ const EditNote = ({ match }) => {
       <div className="newnote-page m-t-20">
         <form
           onSubmit={e => {
-            // Stop the form from submitting
             e.preventDefault();
 
             // set the title of the note to the title in the state, if not's available set to the original title gotten from the GraphQL server

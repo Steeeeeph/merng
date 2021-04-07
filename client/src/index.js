@@ -7,6 +7,8 @@ import { ApolloLink } from "apollo-link";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { onError } from 'apollo-link-error'
 import Notifications, {notify} from 'react-notify-toast';
+import { ChakraProvider } from "@chakra-ui/react";
+
 import dotenv from 'dotenv';
 // import './index.css';
 import App from './App';
@@ -29,8 +31,10 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Notifications />
-    <App />
+    <ChakraProvider>
+      <Notifications />
+      <App />
+    </ChakraProvider>
   </ApolloProvider>,
   document.getElementById("root")
 );

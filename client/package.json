@@ -6,6 +6,9 @@
   "dependencies": {
     "@apollo/client": "^3.3.14",
     "@apollo/react-hooks": "^4.0.0",
+    "@chakra-ui/react": "^1.4.2",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
@@ -14,6 +17,7 @@
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
     "dotenv": "^8.2.0",
+    "framer-motion": "^4.1.2",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.12.3",
     "react": "^17.0.2",
@@ -22,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "realm-web": "^1.2.1",
+    "ts-invariant": "^0.7.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
